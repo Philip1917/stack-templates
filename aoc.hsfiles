@@ -1,17 +1,10 @@
 {-# START_FILE package.yaml #-}
 name:                {{name}}
 version:             0.1.0.0
-#synopsis:
-#description:
-homepage:            https://github.com/{{github-username}}{{^github-username}}githubuser{{/github-username}}/{{name}}#readme
-license:             BSD-3-Clause
-author:              {{author-name}}{{^author-name}}Author name here{{/author-name}}
-maintainer:          {{author-email}}{{^author-email}}example@example.com{{/author-email}}
-copyright:           {{copyright}}{{^copyright}}{{year}}{{^year}}2024{{/year}} {{author-name}}{{^author-name}}Author name here{{/author-name}}{{/copyright}}
-category:            {{category}}{{^category}}Web{{/category}}
 
 dependencies:
   - base >= 4.7 && < 5
+  - split == 0.2.5
 
 ghc-options:
 - -Wall
@@ -38,7 +31,7 @@ module Main (main) where
 
 main :: IO ()
 main = do
-  putStrLn "hello world"
+  input <- readFile "input.txt"
 
 {-# START_FILE input.txt #-}
 -- Puzzle Input goes here --
