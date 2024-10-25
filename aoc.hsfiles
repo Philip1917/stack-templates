@@ -32,6 +32,7 @@ module Main (main) where
 main :: IO ()
 main = do
   input <- readFile "input.txt"
+  print input
 
 {-# START_FILE input.txt #-}
 -- Puzzle Input goes here --
