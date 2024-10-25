@@ -39,3 +39,6 @@ module Main (main) where
 main :: IO ()
 main = do
   putStrLn "hello world"
+
+{-# START_FILE input.txt #-}
+-- Puzzle Input goes here --
